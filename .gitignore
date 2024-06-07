@@ -52,3 +52,11 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+
+# User added
+*.vsidx
+*.opendb
+*.tlog
+ipch\
+/.vs/Ember - Text Editor/v17/ipch/AutoPCH
