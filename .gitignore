@@ -58,5 +58,4 @@ compile_commands.json
 *.vsidx
 *.opendb
 *.tlog
-ipch\
 /.vs/Ember - Text Editor/v17/ipch/AutoPCH
