@@ -1,11 +1,13 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
-#include <qevent.h>
-#include <qpoint.h>
+#include <QEvent>
+#include <QPoint>
 
 
 #include "ui_EmberTextEditor.h"
+#include "mainEditor.h"
+#include "TabEditorSystem.h"
 
 
 class EmberTextEditor : public QMainWindow
@@ -14,10 +16,19 @@ class EmberTextEditor : public QMainWindow
 
 public:
     EmberTextEditor(QWidget *parent = nullptr);
+
+
+    
     ~EmberTextEditor();
 
 private:
-    Ui::EmberTextEditorClass ui;
+    Ui::EmberTextEditorClass *ui;
+    
+    TabEditor *tabEditor;
+    Editor *editor = nullptr;
+
+
+
 
     // Functions for Close & Minimize Buttons of Main Window
     void onAction_CloseWindow();

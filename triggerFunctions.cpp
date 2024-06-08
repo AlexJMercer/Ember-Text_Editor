@@ -20,7 +20,7 @@ void EmberTextEditor::onAction_MinimizeButton() {
 */
 
 void EmberTextEditor::onAction_NewTriggered() {
-
+	tabEditor->addNewTab(new Editor());
 }
 
 void EmberTextEditor::onAction_OpenTriggered() {
