@@ -12,23 +12,22 @@ EmberTextEditor::EmberTextEditor(QWidget *parent)
 
 
     // Connect Button to their respective Function Definitions
-    connect(ui->NewFileButton, &QToolButton::clicked, this, [this]() { onAction_NewTriggered(); });
-    connect(ui->OpenFileButton, &QToolButton::clicked, this, [this]() { onAction_OpenTriggered(); });
+    connect(ui->NewFileButton,      &QToolButton::clicked, this, [this]() { onAction_NewTriggered(); });
+    connect(ui->OpenFileButton,     &QToolButton::clicked, this, [this]() { onAction_OpenTriggered(); });
+    connect(ui->SaveFileButton,     &QToolButton::clicked, this, [this]() { onAction_SaveTriggered(); });
+    connect(ui->SaveAsFileButton,   &QToolButton::clicked, this, [this]() { onAction_SaveAsTriggered(); });
+
     
     // Frameless Window
     this->setWindowFlags(Qt::WindowType::FramelessWindowHint);
-    
-
-    // Set up Tab Editor
-    tabEditor = qobject_cast<TabEditor *>(ui->tabWidget);
 
 }
 
 EmberTextEditor::~EmberTextEditor()
 {
     delete ui;
-
 }
+
 
 
 // Mouse Events

@@ -92,8 +92,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LineNumbering.cpp" />
     <ClCompile Include="mainEditor.cpp" />
-    <ClCompile Include="TabEditorSystem.cpp" />
     <ClCompile Include="triggerFunctions.cpp" />
     <QtRcc Include="EmberTextEditor.qrc" />
     <QtUic Include="EmberTextEditor.ui" />
@@ -103,7 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="mainEditor.h" />
-    <QtMoc Include="TabEditorSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LineNumbering.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

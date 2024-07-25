@@ -43,10 +43,10 @@
     <ClCompile Include="triggerFunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TabEditorSystem.cpp">
+    <ClCompile Include="mainEditor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainEditor.cpp">
+    <ClCompile Include="LineNumbering.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -54,8 +54,10 @@
     <QtMoc Include="mainEditor.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="TabEditorSystem.h">
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LineNumbering.h">
       <Filter>Header Files</Filter>
-    </QtMoc>
+    </ClInclude>
   </ItemGroup>
 </Project>
