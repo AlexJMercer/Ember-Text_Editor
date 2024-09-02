@@ -26,7 +26,7 @@ public:
 private:
     Ui::EmberTextEditorClass *ui;
     
-    Editor *textEdit = nullptr;
+    Editor *textEdit;
 
     QString currentFileName;
 

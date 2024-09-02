@@ -9,5 +9,5 @@ QSize LineNumberArea::sizeHint() const
 
 void LineNumberArea::paintEvent(QPaintEvent* event)
 {
-	textEdit->lineNumberAreaPaintEvent(event);
+	editor->lineNumberAreaPaintEvent(event);
 }

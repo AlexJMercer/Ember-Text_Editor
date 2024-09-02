@@ -3,6 +3,7 @@
 EmberTextEditor::EmberTextEditor(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::EmberTextEditorClass)
+	, textEdit(nullptr)
 {
     ui->setupUi(this);
 
@@ -20,7 +21,10 @@ EmberTextEditor::EmberTextEditor(QWidget *parent)
     
     // Frameless Window
     this->setWindowFlags(Qt::WindowType::FramelessWindowHint);
+    
 
+    textEdit = new Editor();
+    this->setCentralWidget(textEdit);
 }
 
 EmberTextEditor::~EmberTextEditor()
