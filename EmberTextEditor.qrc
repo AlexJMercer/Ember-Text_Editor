@@ -1,16 +1,3 @@
 <RCC>
-    <qresource prefix="/EmberTextEditor">
-        <file>Resources/ApplicationIcon.ico</file>
-        <file>Resources/ApplicationIcon.png</file>
-        <file>Resources/Close.png</file>
-        <file>Resources/CloseDeactivated.png</file>
-        <file>Resources/CloseHoverOrPressed.png</file>
-        <file>Resources/Maximize.png</file>
-        <file>Resources/MaximizeDeactivated.png</file>
-        <file>Resources/Minimize.png</file>
-        <file>Resources/MinimizeDeactivated.png</file>
-        <file>Resources/Restore.png</file>
-        <file>Resources/RestoreDeactivated.png</file>
-        <file>Resources/Transparent.png</file>
-    </qresource>
+    <qresource prefix="/EmberTextEditor"/>
 </RCC>

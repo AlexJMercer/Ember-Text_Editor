@@ -32,7 +32,7 @@ EmberTextEditor::EmberTextEditor(QWidget* parent)
 	//connect(ui->actionAbout_Qt, &QAction::triggered, this, &EmberTextEditor::aboutQt);
 
 	// Make the codeEditor bind to QPlainTextEdit
-	setCentralWidget(codeEditor);
+	
 }
 
 
