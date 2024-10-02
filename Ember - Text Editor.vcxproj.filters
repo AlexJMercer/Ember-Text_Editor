@@ -29,34 +29,31 @@
     <QtUic Include="EmberTextEditor.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="EmberTextEditor.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <ClCompile Include="EmberTextEditor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="triggerFunctions.cpp">
+    <ClCompile Include="EmberTextEditor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainEditor.cpp">
+    <ClCompile Include="CodeEditor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LineNumbering.cpp">
+    <ClCompile Include="LineNumberArea.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="mainEditor.h">
+    <QtMoc Include="EmberTextEditor.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CodeEditor.hpp">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LineNumbering.h">
+    <ClInclude Include="LineNumberArea.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

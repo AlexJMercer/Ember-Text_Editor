@@ -1,5 +1,2 @@
-﻿  LineNumbering.cpp
-  mainEditor.cpp
-  moc_EmberTextEditor.cpp
-  moc_mainEditor.cpp
+﻿  EmberTextEditor.cpp
   Ember - Text Editor.vcxproj -> E:\Ember - Text Editor\x64\Debug\Ember - Text Editor.exe

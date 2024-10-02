@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Ember - Text Editor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\Ember - Text Editor\\EmberTextEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:EmberTextEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\Ember - Text Editor\\CodeEditor.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:CodeEditor.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\Ember - Text Editor\\CodeEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:CodeEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\Ember - Text Editor\\EmberTextEditor.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:EmberTextEditor.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\EMBER - TEXT EDITOR\\EMBER - .36B50D00\\X64\\DEBUG\\UIC\\UI_EMBERTEXTEDITOR.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:EMBER - .36B50D00\\X64\\DEBUG\\UIC\\UI_EMBERTEXTEDITOR.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 140,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CodeEditor.hpp",
+              "DocumentMoniker": "E:\\Ember - Text Editor\\CodeEditor.hpp",
+              "RelativeDocumentMoniker": "CodeEditor.hpp",
+              "ToolTip": "E:\\Ember - Text Editor\\CodeEditor.hpp",
+              "RelativeToolTip": "CodeEditor.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-02T13:31:36.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CodeEditor.cpp",
+              "DocumentMoniker": "E:\\Ember - Text Editor\\CodeEditor.cpp",
+              "RelativeDocumentMoniker": "CodeEditor.cpp",
+              "ToolTip": "E:\\Ember - Text Editor\\CodeEditor.cpp",
+              "RelativeToolTip": "CodeEditor.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-02T13:30:49.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ui_EmberTextEditor.h",
+              "DocumentMoniker": "E:\\Ember - Text Editor\\Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
+              "RelativeDocumentMoniker": "Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
+              "ToolTip": "E:\\Ember - Text Editor\\Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
+              "RelativeToolTip": "Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-02T13:17:43.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmberTextEditor.cpp",
+              "DocumentMoniker": "E:\\Ember - Text Editor\\EmberTextEditor.cpp",
+              "RelativeDocumentMoniker": "EmberTextEditor.cpp",
+              "ToolTip": "E:\\Ember - Text Editor\\EmberTextEditor.cpp*",
+              "RelativeToolTip": "EmberTextEditor.cpp*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-03T19:17:20.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmberTextEditor.hpp",
+              "DocumentMoniker": "E:\\Ember - Text Editor\\EmberTextEditor.hpp",
+              "RelativeDocumentMoniker": "EmberTextEditor.hpp",
+              "ToolTip": "E:\\Ember - Text Editor\\EmberTextEditor.hpp",
+              "RelativeToolTip": "EmberTextEditor.hpp",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-03T19:19:16.119Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
