@@ -1,18 +1,19 @@
-#include "EmberTextEditor.h"
+#include "EmberTextEditor.hpp"
 
 
-#include <QtWidgets/QApplication>
-#include <qstylefactory.h>
+#include <QApplication>
+
+
+
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
-    QApplication::setStyle("fusion");
 
+    QApplication app(argc, argv);
+	QApplication::setStyle("Fusion");
 
     EmberTextEditor window;
 
-    window.setWindowTitle("Ember - Text Editor");
     window.show();
     
     return app.exec();
