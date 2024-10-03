@@ -23,6 +23,9 @@ EmberTextEditor::EmberTextEditor(QWidget* parent)
 
 	connect(codeEditor, &CodeEditor::textChanged, this, &EmberTextEditor::onTextChange);
 
+	connect(codeEditor, &QPlainTextEdit::cursorPositionChanged, this, &EmberTextEditor::updateLineNumberLabel);
+
+
 	//connect(ui->actionCopy, &QAction::triggered, this, &EmberTextEditor::copyText);
 	//connect(ui->actionCut, &QAction::triggered, this, &EmberTextEditor::cutText);
 	//connect(ui->actionPaste, &QAction::triggered, this, &EmberTextEditor::pasteText);
@@ -31,7 +34,6 @@ EmberTextEditor::EmberTextEditor(QWidget* parent)
 	//connect(ui->actionAbout, &QAction::triggered, this, &EmberTextEditor::aboutApp);
 	//connect(ui->actionAbout_Qt, &QAction::triggered, this, &EmberTextEditor::aboutQt);
 
-	// Make the codeEditor bind to QPlainTextEdit
 	
 }
 
@@ -144,7 +146,7 @@ void EmberTextEditor::onAction_Exit()
 {
 	if (textChanged)
 	{
-		int res = QMessageBox::warning(this, "Unsaved Changes", "Are you sure you want to exit?");
+        int res = QMessageBox::warning(this, "Unsaved Changes", "Are you sure you want to exit?", QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
 		
 		if (res == QMessageBox::No)
 			onAction_SaveFile();
@@ -265,4 +267,14 @@ void EmberTextEditor::onTextChange()
 {
 	textChanged = true;
 	setWindowTitle(windowName + " - " + currentFileName + "*");
+}
+
+
+void EmberTextEditor::updateLineNumberLabel()
+{
+	int currentLine = codeEditor->textCursor().blockNumber() + 1;
+
+	// Update the label
+	QString lineLabel = QString("%1 of %2").arg(currentLine).arg(codeEditor->document()->blockCount());
+    ui->labelLineNumber->setText(lineLabel);
 }

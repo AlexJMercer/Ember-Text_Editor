@@ -39,14 +39,13 @@ void CodeEditor::lineNumberAreaPaintEvent(QPaintEvent* event)
         if (block.isVisible() && bottom >= event->rect().top())
         {
             QString number = QString::number(blockNumber + 1);
-            if (blockNumber == textCursor().blockNumber())      // Check if it's the current line
-                painter.setPen(Qt::yellow);                  // Set color to yellow for the current line
+            if (blockNumber == textCursor().blockNumber())
+                painter.setPen(Qt::cyan);
             else
-                painter.setPen(Qt::white);              // Set color to light gray for other lines :D
+                painter.setPen(Qt::white);
 
 
-            painter.drawText(0, top, lineNumberArea->width(), fontMetrics().height(),
-                Qt::AlignCenter, number);
+            painter.drawText(0, top, lineNumberArea->width(), fontMetrics().height(), Qt::AlignRight, number);
         }
 
         block = block.next();
@@ -59,11 +58,14 @@ void CodeEditor::lineNumberAreaPaintEvent(QPaintEvent* event)
 
 int CodeEditor::lineNumberAreaWidth()
 {
-    int digits = 1;
+    int digits = 3; // Minimum width of 3 numbers
+
     int max = qMax(1, blockCount());
-    while (max >= 10) {
-        max /= 10;
-        ++digits;
+    if (max > 999) {
+        while (max >= 10) {
+            max /= 10;
+            ++digits;
+        }
     }
 
     int space = 5 + fontMetrics().horizontalAdvance(QLatin1Char('9')) * digits;

@@ -42,6 +42,7 @@ private:
 
 	void initEditor();
 	void onTextChange();
+	void updateLineNumberLabel();
 
 
 

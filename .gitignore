@@ -59,5 +59,3 @@ compile_commands.json
 *.opendb
 *.tlog
 /.vs/Ember - Text Editor/v17/ipch/AutoPCH
-
-/.vs/Ember - Text Editor/CopilotIndices/0.2.1634.3922

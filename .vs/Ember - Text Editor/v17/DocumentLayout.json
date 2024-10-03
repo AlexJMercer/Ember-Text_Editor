@@ -15,12 +15,12 @@
       "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:CodeEditor.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\EMBER - TEXT EDITOR\\EMBER - .36B50D00\\X64\\DEBUG\\UIC\\UI_EMBERTEXTEDITOR.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:EMBER - .36B50D00\\X64\\DEBUG\\UIC\\UI_EMBERTEXTEDITOR.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\Ember - Text Editor\\EmberTextEditor.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:EmberTextEditor.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Ember - Text Editor\\Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,37 +46,11 @@
               "Title": "EmberTextEditor.cpp",
               "DocumentMoniker": "E:\\Ember - Text Editor\\EmberTextEditor.cpp",
               "RelativeDocumentMoniker": "EmberTextEditor.cpp",
-              "ToolTip": "E:\\Ember - Text Editor\\EmberTextEditor.cpp*",
-              "RelativeToolTip": "EmberTextEditor.cpp*",
-              "ViewState": "AgIAACMAAAAAAAAAAAAMwEAAAAA6AAAAAAAAAA==",
+              "ToolTip": "E:\\Ember - Text Editor\\EmberTextEditor.cpp",
+              "RelativeToolTip": "EmberTextEditor.cpp",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAcwKwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-03T07:17:07.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ui_EmberTextEditor.h",
-              "DocumentMoniker": "E:\\Ember - Text Editor\\Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
-              "RelativeDocumentMoniker": "Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
-              "ToolTip": "E:\\Ember - Text Editor\\Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
-              "RelativeToolTip": "Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
-              "ViewState": "AgIAACUAAAAAAAAAAAAMwBoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-02T21:22:13.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CodeEditor.hpp",
-              "DocumentMoniker": "E:\\Ember - Text Editor\\CodeEditor.hpp",
-              "RelativeDocumentMoniker": "CodeEditor.hpp",
-              "ToolTip": "E:\\Ember - Text Editor\\CodeEditor.hpp",
-              "RelativeToolTip": "CodeEditor.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-02T19:42:28.288Z",
+              "WhenOpened": "2024-10-03T09:40:24.242Z",
               "EditorCaption": ""
             },
             {
@@ -87,23 +61,45 @@
               "RelativeDocumentMoniker": "CodeEditor.cpp",
               "ToolTip": "E:\\Ember - Text Editor\\CodeEditor.cpp",
               "RelativeToolTip": "CodeEditor.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-02T21:05:28.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T09:35:04.494Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "ui_EmberTextEditor.h",
+              "DocumentMoniker": "E:\\Ember - Text Editor\\Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
+              "RelativeDocumentMoniker": "Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
+              "ToolTip": "E:\\Ember - Text Editor\\Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
+              "RelativeToolTip": "Ember - .36B50D00\\x64\\Debug\\uic\\ui_EmberTextEditor.h",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-03T07:56:45.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CodeEditor.hpp",
+              "DocumentMoniker": "E:\\Ember - Text Editor\\CodeEditor.hpp",
+              "RelativeDocumentMoniker": "CodeEditor.hpp",
+              "ToolTip": "E:\\Ember - Text Editor\\CodeEditor.hpp",
+              "RelativeToolTip": "CodeEditor.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-02T19:42:28.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "EmberTextEditor.hpp",
               "DocumentMoniker": "E:\\Ember - Text Editor\\EmberTextEditor.hpp",
               "RelativeDocumentMoniker": "EmberTextEditor.hpp",
               "ToolTip": "E:\\Ember - Text Editor\\EmberTextEditor.hpp",
               "RelativeToolTip": "EmberTextEditor.hpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAMwCIAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-02T19:09:07.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T19:09:07.866Z"
             }
           ]
         }
