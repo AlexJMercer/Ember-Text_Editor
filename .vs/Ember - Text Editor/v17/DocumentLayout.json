@@ -1,36 +1,15 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Ember - Text Editor\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\Ember - Text Editor\\EmberTextEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:EmberTextEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\Ember - Text Editor\\mainEditor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:mainEditor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\Ember - Text Editor\\mainEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:mainEditor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\Ember - Text Editor\\LineNumbering.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:LineNumbering.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|E:\\Ember - Text Editor\\LineNumbering.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{36B50D00-15BC-47A1-BF2F-0788E71B57C6}|Ember - Text Editor.vcxproj|solutionrelative:LineNumbering.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 255,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 93,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,71 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmberTextEditor.cpp",
-              "DocumentMoniker": "E:\\Ember - Text Editor\\EmberTextEditor.cpp",
-              "RelativeDocumentMoniker": "EmberTextEditor.cpp",
-              "ToolTip": "E:\\Ember - Text Editor\\EmberTextEditor.cpp*",
-              "RelativeToolTip": "EmberTextEditor.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-01T20:18:18.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LineNumbering.cpp",
-              "DocumentMoniker": "E:\\Ember - Text Editor\\LineNumbering.cpp",
-              "RelativeDocumentMoniker": "LineNumbering.cpp",
-              "ToolTip": "E:\\Ember - Text Editor\\LineNumbering.cpp",
-              "RelativeToolTip": "LineNumbering.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-01T19:47:55.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "mainEditor.h",
-              "DocumentMoniker": "E:\\Ember - Text Editor\\mainEditor.h",
-              "RelativeDocumentMoniker": "mainEditor.h",
-              "ToolTip": "E:\\Ember - Text Editor\\mainEditor.h",
-              "RelativeToolTip": "mainEditor.h",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAUwBEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-01T19:39:47.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "mainEditor.cpp",
-              "DocumentMoniker": "E:\\Ember - Text Editor\\mainEditor.cpp",
-              "RelativeDocumentMoniker": "mainEditor.cpp",
-              "ToolTip": "E:\\Ember - Text Editor\\mainEditor.cpp",
-              "RelativeToolTip": "mainEditor.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-01T20:13:14.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LineNumbering.h",
-              "DocumentMoniker": "E:\\Ember - Text Editor\\LineNumbering.h",
-              "RelativeDocumentMoniker": "LineNumbering.h",
-              "ToolTip": "E:\\Ember - Text Editor\\LineNumbering.h",
-              "RelativeToolTip": "LineNumbering.h",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAYwBIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-20T18:12:17.953Z",
-              "EditorCaption": ""
             }
           ]
         }
