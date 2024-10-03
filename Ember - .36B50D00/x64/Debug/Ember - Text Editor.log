@@ -1,14 +1,2 @@
-﻿  Reading Qt configuration (C:/Qt/6.7.1/msvc2019_64/bin/qmake)
-  uic EmberTextEditor.ui
-  rcc EmberTextEditor.qrc
-  moc CodeEditor.hpp
-  moc EmberTextEditor.hpp
-   RCC: Warning: No resources in 'E:\Ember - Text Editor\EmberTextEditor.qrc'.
-  CodeEditor.cpp
-  EmberTextEditor.cpp
-  LineNumberArea.cpp
-  main.cpp
-  qrc_EmberTextEditor.cpp
-  moc_CodeEditor.cpp
-  moc_EmberTextEditor.cpp
-  Ember - Text Editor.vcxproj -> E:\Ember - Text Editor\x64\Debug\Ember - Text Editor.exe
+﻿  EmberTextEditor.cpp
+LINK : fatal error LNK1168: cannot open E:\Ember - Text Editor\x64\Debug\Ember - Text Editor.exe for writing

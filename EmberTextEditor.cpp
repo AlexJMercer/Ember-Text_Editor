@@ -59,11 +59,15 @@ void EmberTextEditor::initEditor()
 
 	currentFileName = "untitled.txt";
 
-	codeEditor = new CodeEditor(this);
+	codeEditor = ui->plainTextEdit;
 
+	// Scale the codeEditor to the size of the plainTextEdit
+	//codeEditor->setGeometry(ui->plainTextEdit->geometry());
+
+	
 	// Set Font Properties
-	QFont textFont("Consolas", 14);
-	textFont.setPointSize(15);
+	QFont textFont("Consolas", 12);
+	textFont.setPointSize(12);
 	codeEditor->setFont(textFont);
 
 }
@@ -138,7 +142,15 @@ void EmberTextEditor::onAction_SaveAsFile()
 
 void EmberTextEditor::onAction_Exit()
 {
+	if (textChanged)
+	{
+		int res = QMessageBox::warning(this, "Unsaved Changes", "Are you sure you want to exit?");
+		
+		if (res == QMessageBox::No)
+			onAction_SaveFile();
+	}
 
+	QApplication::quit();
 }
 
 
@@ -157,6 +169,7 @@ void EmberTextEditor::newFile()
 	{
 		QMessageBox msgBox(this);
 		msgBox.setWindowTitle("Warning");
+		msgBox.setText("Do you want to save changes to " + currentFileName + "?");
 		msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
 		msgBox.setDefaultButton(QMessageBox::No);
 

@@ -38,7 +38,7 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="CodeEditor" name="plainTextEdit">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -189,25 +189,15 @@
   </widget>
  </widget>
  <layoutdefault spacing="5" margin="10"/>
+ <customwidgets>
+  <customwidget>
+   <class>CodeEditor</class>
+   <extends>QPlainTextEdit</extends>
+   <header location="global">CodeEditor.hpp</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="EmberTextEditor.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>newBtn</sender>
-   <signal>triggered(QAction*)</signal>
-   <receiver>EmberTextEditorClass</receiver>
-   <slot>update()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>24</x>
-     <y>47</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>442</x>
-     <y>298</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

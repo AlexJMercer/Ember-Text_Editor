@@ -10,6 +10,12 @@
 #include "ui_EmberTextEditor.h"
 
 
+QT_BEGIN_NAMESPACE
+namespace Ui {
+	class EmberTextEditor;
+}
+QT_END_NAMESPACE
+
 class EmberTextEditor : public QMainWindow
 {
     Q_OBJECT
@@ -25,7 +31,7 @@ private:
     Ui::EmberTextEditorClass* ui;
 	CodeEditor* codeEditor;
 
-	
+
 	bool textChanged;
     QString windowName = "Ember Text Editor";
 
