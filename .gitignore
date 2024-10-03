@@ -9,6 +9,8 @@
 *.so.*
 *.dll
 *.dylib
+*.db
+*.db-shm
 
 # Qt-es
 object_script.*.Release
@@ -59,3 +61,4 @@ compile_commands.json
 *.opendb
 *.tlog
 /.vs/Ember - Text Editor/v17/ipch/AutoPCH
+/.vs/Ember - Text Editor/CopilotIndices/0.2.1653.9816/CodeChunks.db
