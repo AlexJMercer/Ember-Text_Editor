@@ -1,13 +1,8 @@
-﻿  Reading Qt configuration (C:/Qt/6.7.1/msvc2019_64/bin/qmake)
-  CodeEditor.cpp
-  EmberTextEditor.cpp
-  LineNumberArea.cpp
+﻿  EmberTextEditor.cpp
   main.cpp
-  qrc_EmberTextEditor.cpp
-  moc_CodeEditor.cpp
-  moc_EmberTextEditor.cpp
   Generating code
-  Previous IPDB not found, fall back to full compilation.
-  All 344 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  1 of 344 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Ember - Text Editor.vcxproj -> E:\Ember - Text Editor\x64\Release\Ember - Text Editor.exe

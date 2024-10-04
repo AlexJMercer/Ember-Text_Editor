@@ -1,2 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CodeEditor">
+    <Position X="2.25" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAUAAAEAAAAQAAAAAAAAAIAAAAAAAgAIAAAA=</HashCode>
+      <FileName>CodeEditor.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmberTextEditor">
+    <Position X="5.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAgAAAgACAEBAAAEggACAAAAAEAAAAEIAEAAAIAIQ=</HashCode>
+      <FileName>EmberTextEditor.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LineNumberArea">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>LineNumberArea.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QMainWindow" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoACQgKYCA0hRAgRkKBY4oAAABEAABuBggAgIAMgACA=</HashCode>
+      <FileName>C:\Qt\6.7.1\msvc2019_64\include\QtWidgets\qmainwindow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QPlainTextEdit" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DF6CgNgUC0FOIIA6BDEs7pJBIOIQoMYwDFCB7AGIMkQ=</HashCode>
+      <FileName>C:\Qt\6.7.1\msvc2019_64\include\QtWidgets\qplaintextedit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QWidget" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hA6pAGgYqICSoYVAaL8yqpBimu1GwLWO4PBqCgXdwII=</HashCode>
+      <FileName>C:\Qt\6.7.1\msvc2019_64\include\QtWidgets\qwidget.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
