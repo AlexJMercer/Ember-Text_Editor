@@ -96,7 +96,11 @@ void EmberTextEditor::onAction_NewFile()
 	newFile();
 }
 
-
+/// <summary>
+/// @brief Open a file from the file system
+/// @details User can click on the Open File button to choose a file 
+///			 from the file system and display its content in the code editor
+/// </summary>
 void EmberTextEditor::onAction_OpenFile()
 {
 	QString filter = "Supported Files (*.txt *.cpp *.c *.hpp *.h *.py *.html *.css *.js)";
