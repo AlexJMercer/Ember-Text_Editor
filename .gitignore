@@ -9,8 +9,8 @@
 *.so.*
 *.dll
 *.dylib
-*.db
-*.db-shm
+.vs/
+Ember - .36B50D00/
 
 # Qt-es
 object_script.*.Release
