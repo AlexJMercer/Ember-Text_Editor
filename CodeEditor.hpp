@@ -5,6 +5,11 @@
 #include <QPainter>
 #include <QTextBlock>
 
+#include "SyntaxHighlighter.hpp"
+#include "Language.hpp"
+
+
+using namespace Language;
 
 class LineNumberArea;
 class CodeEditor : public QPlainTextEdit
@@ -16,6 +21,9 @@ public:
 
 	void lineNumberAreaPaintEvent(QPaintEvent* event);
 	int lineNumberAreaWidth();
+
+	void setLanguage(Lang lang);
+	inline Lang getLanguage() const { return lang; }
 
 
 protected:
@@ -31,6 +39,12 @@ private slots:
 
 private:
 	QWidget* lineNumberArea;
+
+	Lang lang;
+	SyntaxHighLighter *highlighter;
+
+	SyntaxHighLighter *generateHighlighter(Lang lang);
+	
 
 };
 

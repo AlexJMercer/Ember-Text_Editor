@@ -1,11 +1,17 @@
 #include "CodeEditor.hpp"
 #include "LineNumberArea.hpp"
 
+#include "SyntaxHighlight/CHighlighter.hpp"
+#include "SyntaxHighlight/CPPHighlighter.hpp"
+#include "SyntaxHighlight/PythonHighlighter.hpp"
+#include "SyntaxHighlight/JavaHighlighter.hpp"
+
 
 CodeEditor::CodeEditor(QWidget* parent)
 	: QPlainTextEdit(parent)
 {
 	lineNumberArea = new LineNumberArea(this);
+    setLanguage(Lang::None);
 
 	connect(this, &CodeEditor::blockCountChanged, this, &CodeEditor::updateLineNumberAreaWidth);
 	connect(this, &CodeEditor::updateRequest, this, &CodeEditor::updateLineNumberArea);
@@ -162,7 +168,41 @@ void CodeEditor::updateLineNumberArea(const QRect& rect, int dy)
 
 
 
+SyntaxHighLighter* CodeEditor::generateHighlighter(Lang lang)
+{
+    QTextDocument* doc = document();
+
+    switch (lang)
+    {
+        case (Lang::C):
+		    return new CHighLighter(doc);
+        case (Lang::CPP):
+		    return new CPPHighLighter(doc);
+        case (Lang::Python):
+		    return new PythonHighLighter(doc);
+        case (Lang::Java):
+		    return new JavaHighLighter(doc);
+        default:
+            return nullptr;
+    }
+ 
+}
+
+
+
 void CodeEditor::updateLineNumberAreaWidth(int newBlockCount)
 {
 	setViewportMargins(lineNumberAreaWidth(), 0, 0, 0);
+}
+
+
+
+
+void CodeEditor::setLanguage(Lang lang)
+{
+	if (lang == this->lang)
+		return;
+
+	this->lang = lang;
+	this->highlighter = generateHighlighter(lang);
 }

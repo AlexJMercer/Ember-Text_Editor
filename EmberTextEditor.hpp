@@ -5,6 +5,7 @@
 #include <QtWidgets>
 
 #include "CodeEditor.hpp"
+#include "Language.hpp"
 
 
 #include "ui_EmberTextEditor.h"
@@ -45,6 +46,10 @@ private:
 	void updateLineNumberLabel();
 
 
+	void selectLanguageFromExtension();
+	void setProgrammingLanguage(Lang lang);
+
+	
 
 private slots:
 	void onAction_NewFile();

@@ -129,6 +129,8 @@ void EmberTextEditor::onAction_OpenFile()
 	}
 	else
 		QMessageBox::warning(nullptr, "Error", "Could not open file.");
+
+	selectLanguageFromExtension();
 }
 
 
@@ -234,6 +236,7 @@ bool EmberTextEditor::saveFile(QString &filePath)
 
 	file.close();
 	textChanged = false;
+	selectLanguageFromExtension();
 
 	return true;
 }
@@ -241,7 +244,7 @@ bool EmberTextEditor::saveFile(QString &filePath)
 
 bool EmberTextEditor::saveFileAs(QString &filePath)
 {
-	QString filter = "Supported Files (*.txt *.cpp *.c *.hpp *.h *.py *.html *.css *.js)";
+	QString filter = "Supported Files (*.txt *.cpp *.c *.hpp *.h *.py *.java)";
 	filePath = QFileDialog::getSaveFileName(nullptr, "Save File", "", filter);
 
 	if (filePath.isEmpty())
@@ -281,4 +284,36 @@ void EmberTextEditor::updateLineNumberLabel()
 	// Update the label
 	QString lineLabel = QString("%1 of %2").arg(currentLine).arg(codeEditor->document()->blockCount());
     ui->labelLineNumber->setText(lineLabel);
+}
+
+
+
+void EmberTextEditor::selectLanguageFromExtension()
+{
+	QString ext = currFileInfo.suffix();
+	
+	if (ext == "c" || ext == "h")
+		setProgrammingLanguage(Lang::C);
+	
+	else if (ext == "cpp" || ext == "hpp")
+		setProgrammingLanguage(Lang::CPP);
+	
+	else if (ext == "java")
+		setProgrammingLanguage(Lang::Java);
+	
+	else if (ext == "py")
+		setProgrammingLanguage(Lang::Python);
+	
+	else
+		setProgrammingLanguage(Lang::None);
+}
+
+
+
+void EmberTextEditor::setProgrammingLanguage(Lang lang)
+{
+	if (lang == codeEditor->getLanguage())
+		return;
+
+	codeEditor->setLanguage(lang);
 }

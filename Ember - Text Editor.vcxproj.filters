@@ -43,6 +43,12 @@
     <ClCompile Include="LineNumberArea.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SyntaxHighlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Language.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="EmberTextEditor.hpp">
@@ -51,9 +57,15 @@
     <QtMoc Include="CodeEditor.hpp">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="SyntaxHighlighter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LineNumberArea.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Language.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

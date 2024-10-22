@@ -92,6 +92,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Language.cpp" />
+    <ClCompile Include="SyntaxHighlighter.cpp" />
     <QtRcc Include="EmberTextEditor.qrc" />
     <QtUic Include="EmberTextEditor.ui" />
     <ClCompile Include="CodeEditor.cpp" />
@@ -104,7 +106,9 @@
     <QtMoc Include="EmberTextEditor.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Language.hpp" />
     <ClInclude Include="LineNumberArea.hpp" />
+    <QtMoc Include="SyntaxHighlighter.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
