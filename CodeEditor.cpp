@@ -22,6 +22,14 @@ CodeEditor::CodeEditor(QWidget* parent)
 }
 
 
+// Destructor Class
+CodeEditor::~CodeEditor()
+{
+	delete lineNumberArea;
+	delete highlighter;
+}
+
+
 
 void CodeEditor::lineNumberAreaPaintEvent(QPaintEvent* event)
 {
@@ -46,9 +54,9 @@ void CodeEditor::lineNumberAreaPaintEvent(QPaintEvent* event)
         {
             QString number = QString::number(blockNumber + 1);
             if (blockNumber == textCursor().blockNumber())
-                painter.setPen(Qt::cyan);
+                painter.setPen(Qt::yellow);
             else
-                painter.setPen(Qt::white);
+                painter.setPen(Qt::cyan);
 
 
             painter.drawText(0, top, lineNumberArea->width(), fontMetrics().height(), Qt::AlignRight, number);

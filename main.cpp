@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
 	QApplication::setStyle("fusion");
 
     EmberTextEditor window;
-
     window.show();
     
     return app.exec();

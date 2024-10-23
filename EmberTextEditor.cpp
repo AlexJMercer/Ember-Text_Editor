@@ -33,26 +33,18 @@ EmberTextEditor::EmberTextEditor(QWidget* parent)
 	
 	ui->opacitySlider->setStyleSheet(
 		"QSlider::handle:horizontal {"
-		"    background: #2c2c2c;"        // Change handle color to white
-		"    width: 10px;"            // Set handle width
-		"    margin: -5px 0;"           // Set handle margin
-		"    border-radius: 15px;"        // Set handle border radius
+		"    background: #00bfbf;"			// Change handle color to dark cyan
+		"    width: 10px;"					// Set handle width
+		"    margin: -5px 0;"				// Set handle margin
+		"    border-radius: 15px;"			// Set handle border radius
 		"}"
 		"QSlider::groove:horizontal {"
-		"    background: cyan;"        // Change groove color to cyan
-		"    height: 1px;"            // Set groove height
-		"    margin: 0;"           // Default margin
+		"    background: cyan;"				// Change groove color to cyan
+		"    height: 1px;"					// Set groove height
+		"    margin: 0;"					// Default margin
 		"}"
 	);
 
-
-	//connect(ui->actionCopy, &QAction::triggered, this, &EmberTextEditor::copyText);
-	//connect(ui->actionCut, &QAction::triggered, this, &EmberTextEditor::cutText);
-	//connect(ui->actionPaste, &QAction::triggered, this, &EmberTextEditor::pasteText);
-	//connect(ui->actionUndo, &QAction::triggered, this, &EmberTextEditor::undoText);
-	//connect(ui->actionRedo, &QAction::triggered, this, &EmberTextEditor::redoText);
-	//connect(ui->actionAbout, &QAction::triggered, this, &EmberTextEditor::aboutApp);
-	//connect(ui->actionAbout_Qt, &QAction::triggered, this, &EmberTextEditor::aboutQt);
 
 	
 }
@@ -64,6 +56,7 @@ EmberTextEditor::EmberTextEditor(QWidget* parent)
 EmberTextEditor::~EmberTextEditor()
 {
 	delete ui;
+	delete codeEditor;
 }
 
 

@@ -25,6 +25,7 @@ public:
 	void setLanguage(Lang lang);
 	inline Lang getLanguage() const { return lang; }
 
+	~CodeEditor();
 
 protected:
 	void resizeEvent(QResizeEvent* event) override;
