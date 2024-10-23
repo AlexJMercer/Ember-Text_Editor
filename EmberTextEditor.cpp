@@ -25,6 +25,26 @@ EmberTextEditor::EmberTextEditor(QWidget* parent)
 
 	connect(codeEditor, &QPlainTextEdit::cursorPositionChanged, this, &EmberTextEditor::updateLineNumberLabel);
 
+	connect(ui->opacitySlider, &QSlider::valueChanged, this, &EmberTextEditor::changeOpacity);
+	
+	ui->opacitySlider->setMinimum(10);
+	ui->opacitySlider->setMaximum(100);
+	ui->opacitySlider->setValue(100);
+	
+	ui->opacitySlider->setStyleSheet(
+		"QSlider::handle:horizontal {"
+		"    background: #2c2c2c;"        // Change handle color to white
+		"    width: 10px;"            // Set handle width
+		"    margin: -5px 0;"           // Set handle margin
+		"    border-radius: 15px;"        // Set handle border radius
+		"}"
+		"QSlider::groove:horizontal {"
+		"    background: cyan;"        // Change groove color to cyan
+		"    height: 1px;"            // Set groove height
+		"    margin: 0;"           // Default margin
+		"}"
+	);
+
 
 	//connect(ui->actionCopy, &QAction::triggered, this, &EmberTextEditor::copyText);
 	//connect(ui->actionCut, &QAction::triggered, this, &EmberTextEditor::cutText);
@@ -159,6 +179,14 @@ void EmberTextEditor::onAction_Exit()
 	}
 
 	QApplication::quit();
+}
+
+void EmberTextEditor::changeOpacity()
+{
+	int value = ui->opacitySlider->value();
+	float opacity = value / 100.0f;
+	
+	setWindowOpacity(opacity);
 }
 
 

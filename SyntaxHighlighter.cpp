@@ -14,7 +14,7 @@ SyntaxHighLighter::SyntaxHighLighter(QTextDocument* parent)
 	classFormat.setFontWeight(QFont::Bold);
 
 	functionFormat.setFontItalic(true);
-	functionFormat.setForeground(QColor::fromRgb(255, 165, 0));
+	functionFormat.setForeground(QColor::fromRgb(255, 165, 0));			// Orange
 
 	quoteFormat.setForeground(Qt::darkGreen);
 

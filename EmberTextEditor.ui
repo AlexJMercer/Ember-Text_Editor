@@ -131,7 +131,7 @@
     <property name="geometry">
      <rect>
       <x>2</x>
-      <y>221</y>
+      <y>550</y>
       <width>46</width>
       <height>46</height>
      </rect>
@@ -178,6 +178,41 @@
      <string/>
     </property>
    </widget>
+   <widget class="QSlider" name="opacitySlider">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>5</y>
+      <width>123</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+    <property name="invertedAppearance">
+     <bool>true</bool>
+    </property>
+    <property name="invertedControls">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="opacityLabelFixed">
+    <property name="geometry">
+     <rect>
+      <x>706</x>
+      <y>0</y>
+      <width>55</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Opacity:</string>
+    </property>
+   </widget>
    <zorder>newBtn</zorder>
    <zorder>plainTextEdit</zorder>
    <zorder>openBtn</zorder>
@@ -186,6 +221,8 @@
    <zorder>exitBtn</zorder>
    <zorder>labelLineFixed</zorder>
    <zorder>labelLineNumber</zorder>
+   <zorder>opacitySlider</zorder>
+   <zorder>opacityLabelFixed</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="5" margin="10"/>

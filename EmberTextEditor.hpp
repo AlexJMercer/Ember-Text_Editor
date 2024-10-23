@@ -65,6 +65,8 @@ private slots:
 	
 	void onAction_Exit();
 
+	void changeOpacity();
+
 
 };
 
