@@ -29,7 +29,7 @@
    <string>EmberTextEditor</string>
   </property>
   <property name="tabShape">
-   <enum>QTabWidget::Rounded</enum>
+   <enum>QTabWidget::TabShape::Rounded</enum>
   </property>
   <property name="dockNestingEnabled">
    <bool>true</bool>
@@ -80,10 +80,10 @@
       <item>
        <spacer name="verticalSpacer_2">
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Orientation::Vertical</enum>
         </property>
         <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
+         <enum>QSizePolicy::Policy::Fixed</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -99,9 +99,9 @@
          <number>0</number>
         </property>
         <property name="sizeConstraint">
-         <enum>QLayout::SetMaximumSize</enum>
+         <enum>QLayout::SizeConstraint::SetMaximumSize</enum>
         </property>
-        <item alignment="Qt::AlignHCenter">
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
          <widget class="QToolButton" name="newBtn">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -119,14 +119,15 @@
            <string/>
           </property>
           <property name="icon">
-           <iconset theme="QIcon::ThemeIcon::DocumentNew"/>
+           <iconset resource="EmberTextEditor.qrc">
+            <normaloff>:/EmberTextEditor/icons/newDoc.png</normaloff>:/EmberTextEditor/icons/newDoc.png</iconset>
           </property>
           <property name="autoRaise">
            <bool>true</bool>
           </property>
          </widget>
         </item>
-        <item alignment="Qt::AlignHCenter">
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
          <widget class="QToolButton" name="openBtn">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -144,14 +145,15 @@
            <string/>
           </property>
           <property name="icon">
-           <iconset theme="QIcon::ThemeIcon::DocumentOpen"/>
+           <iconset resource="EmberTextEditor.qrc">
+            <normaloff>:/EmberTextEditor/icons/openFile.png</normaloff>:/EmberTextEditor/icons/openFile.png</iconset>
           </property>
           <property name="autoRaise">
            <bool>true</bool>
           </property>
          </widget>
         </item>
-        <item alignment="Qt::AlignHCenter">
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
          <widget class="QToolButton" name="saveBtn">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -169,14 +171,15 @@
            <string/>
           </property>
           <property name="icon">
-           <iconset theme="QIcon::ThemeIcon::DocumentSave"/>
+           <iconset resource="EmberTextEditor.qrc">
+            <normaloff>:/EmberTextEditor/icons/saveFile.png</normaloff>:/EmberTextEditor/icons/saveFile.png</iconset>
           </property>
           <property name="autoRaise">
            <bool>true</bool>
           </property>
          </widget>
         </item>
-        <item alignment="Qt::AlignHCenter">
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
          <widget class="QToolButton" name="saveAsBtn">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -194,7 +197,8 @@
            <string/>
           </property>
           <property name="icon">
-           <iconset theme="QIcon::ThemeIcon::DocumentSaveAs"/>
+           <iconset resource="EmberTextEditor.qrc">
+            <normaloff>:/EmberTextEditor/icons/saveAsFile.png</normaloff>:/EmberTextEditor/icons/saveAsFile.png</iconset>
           </property>
           <property name="autoRaise">
            <bool>true</bool>
@@ -206,10 +210,10 @@
       <item>
        <spacer name="verticalSpacer">
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Orientation::Vertical</enum>
         </property>
         <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
+         <enum>QSizePolicy::Policy::Expanding</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -219,7 +223,7 @@
         </property>
        </spacer>
       </item>
-      <item alignment="Qt::AlignHCenter">
+      <item alignment="Qt::AlignmentFlag::AlignHCenter">
        <widget class="QToolButton" name="exitBtn">
         <property name="enabled">
          <bool>true</bool>
@@ -252,7 +256,8 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset theme="QIcon::ThemeIcon::ApplicationExit"/>
+         <iconset resource="EmberTextEditor.qrc">
+          <normaloff>:/EmberTextEditor/icons/exitApp.png</normaloff>:/EmberTextEditor/icons/exitApp.png</iconset>
         </property>
         <property name="autoRaise">
          <bool>true</bool>
@@ -300,10 +305,10 @@
          </size>
         </property>
         <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
+         <enum>QFrame::Shape::NoFrame</enum>
         </property>
         <property name="frameShadow">
-         <enum>QFrame::Sunken</enum>
+         <enum>QFrame::Shadow::Sunken</enum>
         </property>
         <property name="text">
          <string/>
@@ -313,10 +318,10 @@
       <item>
        <spacer name="horizontalSpacer_2">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Orientation::Horizontal</enum>
         </property>
         <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
+         <enum>QSizePolicy::Policy::Expanding</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -366,7 +371,7 @@
          <string notr="true"/>
         </property>
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Orientation::Horizontal</enum>
         </property>
         <property name="invertedAppearance">
          <bool>true</bool>
@@ -379,10 +384,10 @@
       <item>
        <spacer name="horizontalSpacer">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Orientation::Horizontal</enum>
         </property>
         <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
+         <enum>QSizePolicy::Policy::Fixed</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -409,7 +414,7 @@
        </size>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
      </widget>
     </item>

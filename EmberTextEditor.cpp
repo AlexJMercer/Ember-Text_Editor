@@ -33,10 +33,14 @@ EmberTextEditor::EmberTextEditor(QWidget* parent)
 	
 	ui->opacitySlider->setStyleSheet(
 		"QSlider::handle:horizontal {"
-		"    background: #00bfbf;"			// Change handle color to dark cyan
+		"    background: #2d2d2d;"			// Change handle color to dark cyan
 		"    width: 10px;"					// Set handle width
-		"    margin: -5px 0;"				// Set handle margin
-		"    border-radius: 15px;"			// Set handle border radius
+		"    margin: -6px 0;"				// Set handle margin
+		"    border-radius: 6px;"			// Set handle border radius
+		"    border: 1px solid #000000;    "
+		"}"
+		"    QSlider::handle:horizontal:hover{		"
+		"	 background-color: #00bfbf;		"// Change handle color to dark cyan
 		"}"
 		"QSlider::groove:horizontal {"
 		"    background: cyan;"				// Change groove color to cyan
@@ -70,7 +74,7 @@ EmberTextEditor::~EmberTextEditor()
 void EmberTextEditor::initEditor()
 {
 	setWindowTitle(windowName + " - Untitled");
-	//setWindowIcon(QIcon(":/resources/mainIcon.png"));
+	setWindowIcon(QIcon(":/EmberTextEditor/icons/flames.png"));
 
 	currentFileName = "untitled.txt";
 
