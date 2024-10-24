@@ -25,7 +25,6 @@ CodeEditor::CodeEditor(QWidget* parent)
 // Destructor Class
 CodeEditor::~CodeEditor()
 {
-	delete lineNumberArea;
 	delete highlighter;
 }
 
@@ -147,7 +146,7 @@ void CodeEditor::highlightCurrentLine()
 		QTextEdit::ExtraSelection selection;
 
         QColor lineColor(Qt::darkGray);
-        lineColor.setAlpha(20);
+        lineColor.setAlpha(40);
 
         selection.format.setBackground(lineColor);
         selection.format.setProperty(QTextFormat::FullWidthSelection, true);

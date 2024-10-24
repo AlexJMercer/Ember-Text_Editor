@@ -1,4 +1,3 @@
-
 <h1 align="center">🔥 Ember - Text Editor</h1>
 
 ## Introduction
@@ -11,18 +10,19 @@
 
 ## Current Features
 - **Quick File Loading**: Open and edit text files almost instantly, regardless of size.
-- **Multiple File Format Support**: Works with plain text (`.txt`), and several popular programming languages such as C++, Python, and JavaScript.
+- **Multiple File Format Support**: Works with plain text (`.txt`), and several popular programming languages such as C, C++, Python, and Java.
 - **Undo/Redo Support**: Easily revert or reapply changes to your document with unlimited undo/redo.
+- **Syntax Highlighting**: Basic syntax highlighting for common programming languages to make code more readable.
+- **Opacity Slider**: In case you want to write notes, or code, while watching a YouTube video, you can adjust the opacity of the editor at any time.
+- **Performance Optimization**: Further improvements to handle larger files and complex codebases more efficiently.
 
 ---
 
 ## Upcoming Features
-- **Syntax Highlighting**: Basic syntax highlighting for common programming languages to make code more readable.
 - **Customizable UI**: Change the theme, font, and layout of the editor to suit your personal preferences.
 - **Auto-save Feature**: Prevent data loss by automatically saving your progress during editing sessions.
 - **Enhanced Auto-Save**: More control over auto-save intervals and options for manual save snapshots.
 - **Advanced Syntax Highlighting**: Support for more languages and improved accuracy in highlighting.
-- **Performance Optimization**: Further improvements to handle larger files and complex codebases more efficiently.
 
 
 ---
@@ -37,7 +37,7 @@ To install and use **Ember** locally, follow these steps:
 ### Clone the Repository:
 1. Clone the repository to your local machine:
    ```bash
-   https://github.com/AlexJMercer/Ember-Text_Editor.git
+   git clone https://github.com/AlexJMercer/Ember-Text_Editor.git
    cd Ember-Text_Editor
    ```
 
