@@ -3,8 +3,13 @@
 ## Introduction
 **Ember** is a lightweight and fast text editor designed to provide a seamless document editing experience, with a special focus on quick file handling and minimal system resource usage. Ember is ideal for individual users and developers who want to view and edit text or code files quickly, without unnecessary overhead. With support for syntax highlighting, customization options, and a clean UI, Ember aims to improve productivity while remaining highly responsive, even when handling larger documents.
 
-![Ember - Text Editor](https://github.com/user-attachments/assets/adfbbee3-9631-4e2e-8325-368a027fbf38)
+| ![Ember - Text Editor](https://github.com/user-attachments/assets/be5b55f6-f1f8-4a1a-9fda-aa5949cf8b37)
+|:--:| 
+| *Ember Latest Version* |
 
+| ![Ember - Text Editor](https://github.com/user-attachments/assets/adfbbee3-9631-4e2e-8325-368a027fbf38)
+|:--:| 
+| *Ember Earliest Concept*
 
 ---
 
