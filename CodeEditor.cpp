@@ -10,12 +10,15 @@
 CodeEditor::CodeEditor(QWidget* parent)
 	: QPlainTextEdit(parent)
 {
+	document()->setModified(false);
+
 	lineNumberArea = new LineNumberArea(this);
     setLanguage(Lang::None);
 
 	connect(this, &CodeEditor::blockCountChanged, this, &CodeEditor::updateLineNumberAreaWidth);
 	connect(this, &CodeEditor::updateRequest, this, &CodeEditor::updateLineNumberArea);
 	connect(this, &CodeEditor::cursorPositionChanged, this, &CodeEditor::highlightCurrentLine);
+
 
 	updateLineNumberAreaWidth(0);
 	highlightCurrentLine();
@@ -172,7 +175,6 @@ void CodeEditor::updateLineNumberArea(const QRect& rect, int dy)
     if (rect.contains(viewport()->rect()))
 		updateLineNumberAreaWidth(0);
 }
-
 
 
 SyntaxHighLighter* CodeEditor::generateHighlighter(Lang lang)

@@ -25,6 +25,10 @@ public:
 	void setLanguage(Lang lang);
 	inline Lang getLanguage() const { return lang; }
 
+	void setModifiedState(bool modified) { document()->setModified(modified); }
+	inline bool isUnsaved() const { return document()->isModified(); }
+
+	
 	~CodeEditor();
 
 protected:
@@ -36,7 +40,6 @@ private slots:
 	void updateLineNumberAreaWidth(int newBlockCount);
 	void highlightCurrentLine();
 	void updateLineNumberArea(const QRect& rect, int dy);
-
 
 private:
 	QWidget* lineNumberArea;

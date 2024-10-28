@@ -7,8 +7,7 @@
 
 EmberTextEditor::EmberTextEditor(QWidget* parent)
 	: QMainWindow(parent),
-	  ui(new Ui::EmberTextEditorClass()),
-	  textChanged(false)
+	  ui(new Ui::EmberTextEditorClass())
 {
 	
 	ui->setupUi(this);
@@ -21,7 +20,7 @@ EmberTextEditor::EmberTextEditor(QWidget* parent)
 	connect(ui->saveAsBtn, &QPushButton::clicked, this, &EmberTextEditor::onAction_SaveAsFile);
 	connect(ui->exitBtn, &QPushButton::clicked, this, &EmberTextEditor::onAction_Exit);
 
-	connect(codeEditor, &CodeEditor::textChanged, this, &EmberTextEditor::onTextChange);
+    connect(codeEditor, &QPlainTextEdit::textChanged, this, &EmberTextEditor::updateWindowNameAndUnsaved);
 
 	connect(codeEditor, &QPlainTextEdit::cursorPositionChanged, this, &EmberTextEditor::updateLineNumberLabel);
 
@@ -79,10 +78,6 @@ void EmberTextEditor::initEditor()
 	currentFileName = "untitled.txt";
 
 	codeEditor = ui->plainTextEdit;
-
-	// Scale the codeEditor to the size of the plainTextEdit
-	//codeEditor->setGeometry(ui->plainTextEdit->geometry());
-
 	
 	// Set Font Properties
 	QFont textFont("Consolas", 12);
@@ -113,11 +108,11 @@ void EmberTextEditor::onAction_NewFile()
 	newFile();
 }
 
-/// <summary>
+///
 /// @brief Open a file from the file system
 /// @details User can click on the Open File button to choose a file 
 ///			 from the file system and display its content in the code editor
-/// </summary>
+///
 void EmberTextEditor::onAction_OpenFile()
 {
 	QString filter = "Supported Files (*.txt *.cpp *.c *.hpp *.h *.py *.html *.css *.js)";
@@ -134,26 +129,31 @@ void EmberTextEditor::onAction_OpenFile()
 		setWindowTitle(windowName + " - " + currentFileName);
 
 		QFile file(filePath);
+		
 		if (file.open(QIODevice::ReadOnly | QIODevice::Text))
 		{
 			QTextStream in(&file);
 			QString content = in.readAll();
 			codeEditor->setPlainText(content);
-			file.close();
 		}
 		else
 			QMessageBox::warning(nullptr, "Error", "Could not open file.");
+		
+		file.close();
 	}
 	else
 		QMessageBox::warning(nullptr, "Error", "Could not open file.");
 
 	selectLanguageFromExtension();
+	codeEditor->setModifiedState(false);
+	updateWindowNameAndUnsaved();
 }
 
 
 void EmberTextEditor::onAction_SaveFile()
 {
 	QString path(currFileInfo.absoluteFilePath());
+	
 	saveFile(path);
 }
 
@@ -161,18 +161,21 @@ void EmberTextEditor::onAction_SaveFile()
 void EmberTextEditor::onAction_SaveAsFile()
 {
 	QString path(currFileInfo.absoluteFilePath());
+	
 	saveFileAs(path);
 }
 
 
 void EmberTextEditor::onAction_Exit()
 {
-	if (textChanged)
+	if (codeEditor->isUnsaved())
 	{
         int res = QMessageBox::warning(this, "Unsaved Changes", "Are you sure you want to exit?", QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
 		
 		if (res == QMessageBox::No)
 			onAction_SaveFile();
+		else if (res == QMessageBox::Cancel)
+			return;
 	}
 
 	QApplication::quit();
@@ -198,32 +201,25 @@ void EmberTextEditor::changeOpacity()
 
 void EmberTextEditor::newFile()
 {
-	if (textChanged)
+	// Check if there are unsaved changes
+	if (codeEditor->isUnsaved())
 	{
-		QMessageBox msgBox(this);
-		msgBox.setWindowTitle("Warning");
-		msgBox.setText("Do you want to save changes to " + currentFileName + "?");
-		msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
-		msgBox.setDefaultButton(QMessageBox::No);
+		int res = QMessageBox::warning(this, "Unsaved Changes", "Are you sure you want to create a new file?", QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
 
-		int result = msgBox.exec();
-
-		if (result == QMessageBox::Cancel)
-		{
+		if (res == QMessageBox::No)
+			onAction_SaveFile();
+		else if (res == QMessageBox::Cancel)
 			return;
-		}
-		else if (result == QMessageBox::Yes)
-		{
-			QString path = currFileInfo.absoluteFilePath();
-			saveFile(path);
-		}
 	}
 
-	codeEditor->setPlainText("");
-	currentFileName = "untitled.txt";
+	codeEditor->clear();
+	currentFileName = "Untitled";
 
-	setWindowTitle(windowName + " - " + currentFileName);
-	textChanged = false;
+	currFileInfo = QFileInfo();
+		
+	codeEditor->setModifiedState(false);
+	updateWindowNameAndUnsaved();
+	setProgrammingLanguage(Lang::None);
 }
 
 
@@ -231,8 +227,6 @@ bool EmberTextEditor::saveFile(QString &filePath)
 {
 	bool savedAs = false;
 
-	QString content = codeEditor->toPlainText();
-	
 	if (filePath.isEmpty())
 	{
 		if (!saveFileAs(filePath))
@@ -240,28 +234,30 @@ bool EmberTextEditor::saveFile(QString &filePath)
 		else
 			savedAs = true;
 	}
-
+	
 	QFile file(filePath);
-	if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
-	{
-		QMessageBox::warning(nullptr, "Error", "Could not save changes to file.");
-		return false;
-	}
 
-	if (!savedAs)
+	if (!savedAs) 
 	{
+		if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+		{
+			QMessageBox::warning(nullptr, "Error", "Could not save changes to file.");
+			return false;
+		}
+
 		QTextStream out(&file);
+		QString content = codeEditor->toPlainText();
 		out << content;
 
 		currFileInfo = QFileInfo(filePath);
 		currentFileName = currFileInfo.fileName();
-
-		setWindowTitle(windowName + " - " + currentFileName);
+	
+		codeEditor->setModifiedState(false);
+		updateWindowNameAndUnsaved();
+		selectLanguageFromExtension();
+	
 	}
-
 	file.close();
-	textChanged = false;
-	selectLanguageFromExtension();
 
 	return true;
 }
@@ -269,8 +265,7 @@ bool EmberTextEditor::saveFile(QString &filePath)
 
 bool EmberTextEditor::saveFileAs(QString &filePath)
 {
-	QString filter = "Supported Files (*.txt *.cpp *.c *.hpp *.h *.py *.java)";
-	filePath = QFileDialog::getSaveFileName(nullptr, "Save File", "", filter);
+	filePath = QFileDialog::getSaveFileName(nullptr, "Save File As", "", "Supported Files (*.txt *.cpp *.c *.hpp *.h *.py *.java)");
 
 	if (filePath.isEmpty())
 		return false;	
@@ -281,6 +276,7 @@ bool EmberTextEditor::saveFileAs(QString &filePath)
 
 	QString content = codeEditor->toPlainText();
 	QFile file(filePath);
+	
 	if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
 	{
 		QMessageBox::warning(nullptr, "Error", "Could not save changes to file.");
@@ -289,16 +285,22 @@ bool EmberTextEditor::saveFileAs(QString &filePath)
 
 	QTextStream out(&file);
 	out << content;
-	textChanged = false;
-
+	
+	file.close();
+	
+	codeEditor->setModifiedState(false);
+	updateWindowNameAndUnsaved();
+	
 	return true;
 }
 
 
-void EmberTextEditor::onTextChange()
+void EmberTextEditor::updateWindowNameAndUnsaved()
 {
-	textChanged = true;
-	setWindowTitle(windowName + " - " + currentFileName + "*");
+	if (codeEditor->isUnsaved())
+		setWindowTitle(windowName + " - " + currentFileName + "*");
+	else
+		setWindowTitle(windowName + " - " + currentFileName);
 }
 
 
@@ -342,3 +344,6 @@ void EmberTextEditor::setProgrammingLanguage(Lang lang)
 
 	codeEditor->setLanguage(lang);
 }
+
+
+

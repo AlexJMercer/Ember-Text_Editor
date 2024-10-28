@@ -33,7 +33,6 @@ private:
 	CodeEditor* codeEditor;
 
 
-	bool textChanged;
     QString windowName = "Ember Text Editor";
 
 
@@ -42,7 +41,6 @@ private:
 
 
 	void initEditor();
-	void onTextChange();
 	void updateLineNumberLabel();
 
 
@@ -50,6 +48,7 @@ private:
 	void setProgrammingLanguage(Lang lang);
 
 	
+	void updateWindowNameAndUnsaved();
 
 private slots:
 	void onAction_NewFile();
